@@ -111,10 +111,9 @@
 			visibility: visible;
 		}
 	</style>
-
 </head>
 <body>
-	<canvas id='canvas'>
+	<canvas id='canvas' tabindex='0'>
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
@@ -133,6 +132,11 @@
 		<div id='status-notice' class='godot' style='display: none;'></div>
 	</div>
 
+	<script type='text/javascript'>
+		window.onload = function() {
+		document.getElementById('canvas').focus(); 
+		}
+	</script>
 	<script type='text/javascript' src='RollingRommel.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
